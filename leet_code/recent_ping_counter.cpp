@@ -35,36 +35,3 @@ class RecentCounter {
     return history->countDive(history->top, history->top);
   }
 };
-
-/**
- * Your RecentCounter object will be instantiated and called as such:
- * RecentCounter* obj = new RecentCounter();
- * int param_1 = obj->ping(t);
- */
-
-/**
- * Definition for a binary tree node.
- */
-struct TreeNode {
-  int val;
-  TreeNode* left;
-  TreeNode* right;
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-};
-
-class Solution {
- public:
-  TreeNode* searchBST(TreeNode* root, int val) {
-    if (root) {
-      if (root->val == val) {
-        return root;
-      }
-      TreeNode* left = searchBST(root->left, val);
-      TreeNode* right = searchBST(root->right, val);
-
-      left ? left : right ? right : nullptr;
-    }
-
-    return nullptr;
-  }
-};
