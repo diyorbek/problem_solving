@@ -64,7 +64,9 @@
     "utility": "cpp",
     "set": "cpp",
     "__tree": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "deque": "cpp",
+    "queue": "cpp"
   },
   "code-runner.executorMap": {
     "cpp": "cd $dir && g++ -std=c++11 $fileName -o $fileNameWithoutExt.exe && $dir$fileNameWithoutExt.exe"
