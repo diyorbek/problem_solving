@@ -66,9 +66,14 @@
     "__tree": "cpp",
     "map": "cpp",
     "deque": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "list": "cpp"
   },
   "code-runner.executorMap": {
     "cpp": "cd $dir && g++ -std=c++11 $fileName -o $fileNameWithoutExt.exe && $dir$fileNameWithoutExt.exe"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
   }
 }
