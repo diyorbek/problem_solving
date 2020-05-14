@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/self-crossing/submissions/
+// https://leetcode.com/problems/self-crossing/
 // time: 56ms, memory: 36.9MB
 #include <vector>
 
