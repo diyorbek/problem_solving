@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/search-in-a-binary-search-tree/submissions/
+// https://leetcode.com/problems/search-in-a-binary-search-tree/
 // time: 44ms, memory: 28.4MB
 
 class Solution {
