@@ -68,7 +68,8 @@
     "deque": "cpp",
     "queue": "cpp",
     "list": "cpp",
-    "__functional_03": "cpp"
+    "__functional_03": "cpp",
+    "numeric": "cpp"
   },
   "code-runner.executorMap": {
     "cpp": "cd $dir && g++ -std=c++11 $fileName -o $fileNameWithoutExt.exe && $dir$fileNameWithoutExt.exe"
