@@ -12,36 +12,30 @@ struct TreeNode {
 
 class Solution {
  public:
-  int countNodes(TreeNode* root) {
-    int height = getHeight(root);
+  int countHeight(TreeNode* node) {
+    int leftHeight = 0;
+    int rightHeight = 0;
 
-    if (height < 2) {
-      return height;
+    TreeNode* temp = node;
+
+    while (temp != NULL) {
+      leftHeight++;
+      temp = temp->left;
     }
 
-    int lastLevelNodesCount = countNodesInLevel(root, height - 1, 0);
+    temp = node;
 
-    return lastLevelNodesCount + pow(2, height - 1) - 1;
+    while (temp != NULL) {
+      rightHeight++;
+      temp = temp->right;
+    }
+
+    if (leftHeight == rightHeight) {
+      return pow(2, leftHeight) - 1;
+    }
+
+    return 1 + countHeight(node->left) + countHeight(node->right);
   }
 
-  int getHeight(TreeNode* root) {
-    if (!root) {
-      return 0;
-    }
-
-    return 1 + getHeight(root->left);
-  }
-
-  int countNodesInLevel(TreeNode* root, int l, int current) {
-    if (!root) {
-      return 0;
-    }
-
-    if (l == current) {
-      return 1;
-    }
-
-    return countNodesInLevel(root->left, l, current + 1) +
-           countNodesInLevel(root->right, l, current + 1);
-  }
+  int countNodes(TreeNode* root) { return countHeight(root); }
 };
