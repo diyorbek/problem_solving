@@ -52,4 +52,6 @@ add_executable(problem_solving
         leet_code/c++/sliding_window_max.cpp
         leet_code/c++/sort_by_bits.cpp
         leet_code/c++/utils.cpp
-        leet_code/c++/valid_anagram.cpp)
+        leet_code/c++/valid_anagram.cpp hackerrank/sorting.cpp)
+
+add_executable(sorting hackerrank/sorting.cpp)
